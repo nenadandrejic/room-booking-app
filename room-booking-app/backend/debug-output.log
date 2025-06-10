@@ -1,0 +1,626 @@
+1. Environment loaded
+2. Express loaded
+3. Middleware packages loaded
+4. Models loaded
+5. Error handler loaded
+6. All routes loaded
+7. Express app created
+8. Port configured: 5001
+9. Helmet middleware applied
+10. Rate limiting applied
+11. CORS applied
+12. Body parsing middleware applied
+13. Logging middleware applied
+14. Health route added
+15. API routes mounted
+16. 404 handler added
+17. Error handler added
+24. Calling startServer...
+18. Starting server function...
+Executing (default): SELECT 1+1 AS result
+19. Database connection established
+Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';
+Executing (default): PRAGMA TABLE_INFO(`users`);
+Executing (default): PRAGMA foreign_key_list(`users`)
+Executing (default): PRAGMA INDEX_LIST(`users`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_2`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_3`)
+Executing (default): PRAGMA INDEX_INFO(`users_email`)
+Executing (default): PRAGMA INDEX_INFO(`users_employee_id`)
+Executing (default): PRAGMA foreign_key_list(`users`)
+Executing (default): PRAGMA TABLE_INFO(`users`);
+Executing (default): PRAGMA INDEX_LIST(`users`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_2`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_3`)
+Executing (default): PRAGMA INDEX_INFO(`users_email`)
+Executing (default): PRAGMA INDEX_INFO(`users_employee_id`)
+Executing (default): PRAGMA foreign_key_list(`users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `users_backup` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users_backup` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users`;
+Executing (default): DROP TABLE `users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users_backup`;
+Executing (default): DROP TABLE `users_backup`;
+Executing (default): PRAGMA TABLE_INFO(`users`);
+Executing (default): PRAGMA INDEX_LIST(`users`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_2`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_3`)
+Executing (default): PRAGMA foreign_key_list(`users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `users_backup` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users_backup` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users`;
+Executing (default): DROP TABLE `users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users_backup`;
+Executing (default): DROP TABLE `users_backup`;
+Executing (default): PRAGMA TABLE_INFO(`users`);
+Executing (default): PRAGMA INDEX_LIST(`users`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_2`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_3`)
+Executing (default): PRAGMA foreign_key_list(`users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `users_backup` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users_backup` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users`;
+Executing (default): DROP TABLE `users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users_backup`;
+Executing (default): DROP TABLE `users_backup`;
+Executing (default): PRAGMA TABLE_INFO(`users`);
+Executing (default): PRAGMA INDEX_LIST(`users`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_2`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_3`)
+Executing (default): PRAGMA foreign_key_list(`users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `users_backup` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users_backup` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users`;
+Executing (default): DROP TABLE `users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users_backup`;
+Executing (default): DROP TABLE `users_backup`;
+Executing (default): PRAGMA TABLE_INFO(`users`);
+Executing (default): PRAGMA INDEX_LIST(`users`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_2`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_3`)
+Executing (default): PRAGMA foreign_key_list(`users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `users_backup` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users_backup` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users`;
+Executing (default): DROP TABLE `users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users_backup`;
+Executing (default): DROP TABLE `users_backup`;
+Executing (default): PRAGMA TABLE_INFO(`users`);
+Executing (default): PRAGMA INDEX_LIST(`users`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_2`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_3`)
+Executing (default): PRAGMA foreign_key_list(`users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `users_backup` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users_backup` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users`;
+Executing (default): DROP TABLE `users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users_backup`;
+Executing (default): DROP TABLE `users_backup`;
+Executing (default): PRAGMA TABLE_INFO(`users`);
+Executing (default): PRAGMA INDEX_LIST(`users`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_2`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_3`)
+Executing (default): PRAGMA foreign_key_list(`users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `users_backup` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users_backup` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users`;
+Executing (default): DROP TABLE `users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users_backup`;
+Executing (default): DROP TABLE `users_backup`;
+Executing (default): PRAGMA TABLE_INFO(`users`);
+Executing (default): PRAGMA INDEX_LIST(`users`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_2`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_3`)
+Executing (default): PRAGMA foreign_key_list(`users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `users_backup` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users_backup` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users`;
+Executing (default): DROP TABLE `users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users_backup`;
+Executing (default): DROP TABLE `users_backup`;
+Executing (default): PRAGMA TABLE_INFO(`users`);
+Executing (default): PRAGMA INDEX_LIST(`users`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_2`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_3`)
+Executing (default): PRAGMA foreign_key_list(`users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `users_backup` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users_backup` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users`;
+Executing (default): DROP TABLE `users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` UUID UNIQUE PRIMARY KEY, `employeeId` VARCHAR(255) UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `isAdmin` TINYINT(1) DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `locationId` UUID, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `users` SELECT `id`, `employeeId`, `email`, `name`, `password`, `isAdmin`, `isActive`, `locationId`, `createdAt`, `updatedAt` FROM `users_backup`;
+Executing (default): DROP TABLE `users_backup`;
+Executing (default): PRAGMA INDEX_LIST(`users`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_2`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_3`)
+Executing (default): CREATE UNIQUE INDEX `users_email` ON `users` (`email`)
+Executing (default): CREATE UNIQUE INDEX `users_employee_id` ON `users` (`employeeId`)
+Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='locations';
+Executing (default): PRAGMA TABLE_INFO(`locations`);
+Executing (default): PRAGMA foreign_key_list(`locations`)
+Executing (default): PRAGMA INDEX_LIST(`locations`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_locations_1`)
+Executing (default): PRAGMA foreign_key_list(`locations`)
+Executing (default): PRAGMA TABLE_INFO(`locations`);
+Executing (default): PRAGMA INDEX_LIST(`locations`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_locations_1`)
+Executing (default): PRAGMA foreign_key_list(`locations`)
+Executing (default): CREATE TABLE IF NOT EXISTS `locations_backup` (`id` UUID UNIQUE PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `address` TEXT, `city` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `locations_backup` SELECT `id`, `name`, `address`, `city`, `isActive`, `createdAt`, `updatedAt` FROM `locations`;
+Executing (default): DROP TABLE `locations`;
+Executing (default): CREATE TABLE IF NOT EXISTS `locations` (`id` UUID UNIQUE PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `address` TEXT, `city` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `locations` SELECT `id`, `name`, `address`, `city`, `isActive`, `createdAt`, `updatedAt` FROM `locations_backup`;
+Executing (default): DROP TABLE `locations_backup`;
+Executing (default): PRAGMA TABLE_INFO(`locations`);
+Executing (default): PRAGMA INDEX_LIST(`locations`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_locations_1`)
+Executing (default): PRAGMA foreign_key_list(`locations`)
+Executing (default): CREATE TABLE IF NOT EXISTS `locations_backup` (`id` UUID UNIQUE PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `address` TEXT, `city` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `locations_backup` SELECT `id`, `name`, `address`, `city`, `isActive`, `createdAt`, `updatedAt` FROM `locations`;
+Executing (default): DROP TABLE `locations`;
+Executing (default): CREATE TABLE IF NOT EXISTS `locations` (`id` UUID UNIQUE PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `address` TEXT, `city` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `locations` SELECT `id`, `name`, `address`, `city`, `isActive`, `createdAt`, `updatedAt` FROM `locations_backup`;
+Executing (default): DROP TABLE `locations_backup`;
+Executing (default): PRAGMA TABLE_INFO(`locations`);
+Executing (default): PRAGMA INDEX_LIST(`locations`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_locations_1`)
+Executing (default): PRAGMA foreign_key_list(`locations`)
+Executing (default): CREATE TABLE IF NOT EXISTS `locations_backup` (`id` UUID UNIQUE PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `address` TEXT, `city` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `locations_backup` SELECT `id`, `name`, `address`, `city`, `isActive`, `createdAt`, `updatedAt` FROM `locations`;
+Executing (default): DROP TABLE `locations`;
+Executing (default): CREATE TABLE IF NOT EXISTS `locations` (`id` UUID UNIQUE PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `address` TEXT, `city` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `locations` SELECT `id`, `name`, `address`, `city`, `isActive`, `createdAt`, `updatedAt` FROM `locations_backup`;
+Executing (default): DROP TABLE `locations_backup`;
+Executing (default): PRAGMA TABLE_INFO(`locations`);
+Executing (default): PRAGMA INDEX_LIST(`locations`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_locations_1`)
+Executing (default): PRAGMA foreign_key_list(`locations`)
+Executing (default): CREATE TABLE IF NOT EXISTS `locations_backup` (`id` UUID UNIQUE PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `address` TEXT, `city` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `locations_backup` SELECT `id`, `name`, `address`, `city`, `isActive`, `createdAt`, `updatedAt` FROM `locations`;
+Executing (default): DROP TABLE `locations`;
+Executing (default): CREATE TABLE IF NOT EXISTS `locations` (`id` UUID UNIQUE PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `address` TEXT, `city` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `locations` SELECT `id`, `name`, `address`, `city`, `isActive`, `createdAt`, `updatedAt` FROM `locations_backup`;
+Executing (default): DROP TABLE `locations_backup`;
+Executing (default): PRAGMA TABLE_INFO(`locations`);
+Executing (default): PRAGMA INDEX_LIST(`locations`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_locations_1`)
+Executing (default): PRAGMA foreign_key_list(`locations`)
+Executing (default): CREATE TABLE IF NOT EXISTS `locations_backup` (`id` UUID UNIQUE PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `address` TEXT, `city` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `locations_backup` SELECT `id`, `name`, `address`, `city`, `isActive`, `createdAt`, `updatedAt` FROM `locations`;
+Executing (default): DROP TABLE `locations`;
+Executing (default): CREATE TABLE IF NOT EXISTS `locations` (`id` UUID UNIQUE PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `address` TEXT, `city` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `locations` SELECT `id`, `name`, `address`, `city`, `isActive`, `createdAt`, `updatedAt` FROM `locations_backup`;
+Executing (default): DROP TABLE `locations_backup`;
+Executing (default): PRAGMA TABLE_INFO(`locations`);
+Executing (default): PRAGMA INDEX_LIST(`locations`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_locations_1`)
+Executing (default): PRAGMA foreign_key_list(`locations`)
+Executing (default): CREATE TABLE IF NOT EXISTS `locations_backup` (`id` UUID UNIQUE PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `address` TEXT, `city` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `locations_backup` SELECT `id`, `name`, `address`, `city`, `isActive`, `createdAt`, `updatedAt` FROM `locations`;
+Executing (default): DROP TABLE `locations`;
+Executing (default): CREATE TABLE IF NOT EXISTS `locations` (`id` UUID UNIQUE PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `address` TEXT, `city` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `locations` SELECT `id`, `name`, `address`, `city`, `isActive`, `createdAt`, `updatedAt` FROM `locations_backup`;
+Executing (default): DROP TABLE `locations_backup`;
+Executing (default): PRAGMA INDEX_LIST(`locations`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_locations_1`)
+Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='buildings';
+Executing (default): PRAGMA TABLE_INFO(`buildings`);
+Executing (default): PRAGMA foreign_key_list(`buildings`)
+Executing (default): PRAGMA INDEX_LIST(`buildings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_buildings_1`)
+Executing (default): PRAGMA INDEX_INFO(`buildings_location_id`)
+Executing (default): PRAGMA foreign_key_list(`buildings`)
+Executing (default): PRAGMA TABLE_INFO(`buildings`);
+Executing (default): PRAGMA INDEX_LIST(`buildings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_buildings_1`)
+Executing (default): PRAGMA INDEX_INFO(`buildings_location_id`)
+Executing (default): PRAGMA foreign_key_list(`buildings`)
+Executing (default): CREATE TABLE IF NOT EXISTS `buildings_backup` (`id` UUID UNIQUE PRIMARY KEY, `locationId` UUID NOT NULL REFERENCES `locations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `name` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `buildings_backup` SELECT `id`, `locationId`, `name`, `isActive`, `createdAt`, `updatedAt` FROM `buildings`;
+Executing (default): DROP TABLE `buildings`;
+Executing (default): CREATE TABLE IF NOT EXISTS `buildings` (`id` UUID UNIQUE PRIMARY KEY, `locationId` UUID NOT NULL REFERENCES `locations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `name` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `buildings` SELECT `id`, `locationId`, `name`, `isActive`, `createdAt`, `updatedAt` FROM `buildings_backup`;
+Executing (default): DROP TABLE `buildings_backup`;
+Executing (default): PRAGMA TABLE_INFO(`buildings`);
+Executing (default): PRAGMA INDEX_LIST(`buildings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_buildings_1`)
+Executing (default): PRAGMA foreign_key_list(`buildings`)
+Executing (default): CREATE TABLE IF NOT EXISTS `buildings_backup` (`id` UUID UNIQUE PRIMARY KEY, `locationId` UUID NOT NULL REFERENCES `locations` (`id`), `name` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `buildings_backup` SELECT `id`, `locationId`, `name`, `isActive`, `createdAt`, `updatedAt` FROM `buildings`;
+Executing (default): DROP TABLE `buildings`;
+Executing (default): CREATE TABLE IF NOT EXISTS `buildings` (`id` UUID UNIQUE PRIMARY KEY, `locationId` UUID NOT NULL REFERENCES `locations` (`id`), `name` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `buildings` SELECT `id`, `locationId`, `name`, `isActive`, `createdAt`, `updatedAt` FROM `buildings_backup`;
+Executing (default): DROP TABLE `buildings_backup`;
+Executing (default): PRAGMA TABLE_INFO(`buildings`);
+Executing (default): PRAGMA INDEX_LIST(`buildings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_buildings_1`)
+Executing (default): PRAGMA foreign_key_list(`buildings`)
+Executing (default): CREATE TABLE IF NOT EXISTS `buildings_backup` (`id` UUID UNIQUE PRIMARY KEY, `locationId` UUID NOT NULL REFERENCES `locations` (`id`), `name` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `buildings_backup` SELECT `id`, `locationId`, `name`, `isActive`, `createdAt`, `updatedAt` FROM `buildings`;
+Executing (default): DROP TABLE `buildings`;
+Executing (default): CREATE TABLE IF NOT EXISTS `buildings` (`id` UUID UNIQUE PRIMARY KEY, `locationId` UUID NOT NULL REFERENCES `locations` (`id`), `name` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `buildings` SELECT `id`, `locationId`, `name`, `isActive`, `createdAt`, `updatedAt` FROM `buildings_backup`;
+Executing (default): DROP TABLE `buildings_backup`;
+Executing (default): PRAGMA TABLE_INFO(`buildings`);
+Executing (default): PRAGMA INDEX_LIST(`buildings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_buildings_1`)
+Executing (default): PRAGMA foreign_key_list(`buildings`)
+Executing (default): CREATE TABLE IF NOT EXISTS `buildings_backup` (`id` UUID UNIQUE PRIMARY KEY, `locationId` UUID NOT NULL REFERENCES `locations` (`id`), `name` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `buildings_backup` SELECT `id`, `locationId`, `name`, `isActive`, `createdAt`, `updatedAt` FROM `buildings`;
+Executing (default): DROP TABLE `buildings`;
+Executing (default): CREATE TABLE IF NOT EXISTS `buildings` (`id` UUID UNIQUE PRIMARY KEY, `locationId` UUID NOT NULL REFERENCES `locations` (`id`), `name` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `buildings` SELECT `id`, `locationId`, `name`, `isActive`, `createdAt`, `updatedAt` FROM `buildings_backup`;
+Executing (default): DROP TABLE `buildings_backup`;
+Executing (default): PRAGMA TABLE_INFO(`buildings`);
+Executing (default): PRAGMA INDEX_LIST(`buildings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_buildings_1`)
+Executing (default): PRAGMA foreign_key_list(`buildings`)
+Executing (default): CREATE TABLE IF NOT EXISTS `buildings_backup` (`id` UUID UNIQUE PRIMARY KEY, `locationId` UUID NOT NULL REFERENCES `locations` (`id`), `name` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `buildings_backup` SELECT `id`, `locationId`, `name`, `isActive`, `createdAt`, `updatedAt` FROM `buildings`;
+Executing (default): DROP TABLE `buildings`;
+Executing (default): CREATE TABLE IF NOT EXISTS `buildings` (`id` UUID UNIQUE PRIMARY KEY, `locationId` UUID NOT NULL REFERENCES `locations` (`id`), `name` VARCHAR(255) NOT NULL, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `buildings` SELECT `id`, `locationId`, `name`, `isActive`, `createdAt`, `updatedAt` FROM `buildings_backup`;
+Executing (default): DROP TABLE `buildings_backup`;
+Executing (default): PRAGMA INDEX_LIST(`buildings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_buildings_1`)
+Executing (default): CREATE INDEX `buildings_location_id` ON `buildings` (`locationId`)
+Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='floors';
+Executing (default): PRAGMA TABLE_INFO(`floors`);
+Executing (default): PRAGMA foreign_key_list(`floors`)
+Executing (default): PRAGMA INDEX_LIST(`floors`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_floors_1`)
+Executing (default): PRAGMA INDEX_INFO(`floors_building_id`)
+Executing (default): PRAGMA foreign_key_list(`floors`)
+Executing (default): PRAGMA TABLE_INFO(`floors`);
+Executing (default): PRAGMA INDEX_LIST(`floors`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_floors_1`)
+Executing (default): PRAGMA INDEX_INFO(`floors_building_id`)
+Executing (default): PRAGMA foreign_key_list(`floors`)
+Executing (default): CREATE TABLE IF NOT EXISTS `floors_backup` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors_backup` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors`;
+Executing (default): DROP TABLE `floors`;
+Executing (default): CREATE TABLE IF NOT EXISTS `floors` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors_backup`;
+Executing (default): DROP TABLE `floors_backup`;
+Executing (default): PRAGMA TABLE_INFO(`floors`);
+Executing (default): PRAGMA INDEX_LIST(`floors`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_floors_1`)
+Executing (default): PRAGMA foreign_key_list(`floors`)
+Executing (default): CREATE TABLE IF NOT EXISTS `floors_backup` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`), `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors_backup` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors`;
+Executing (default): DROP TABLE `floors`;
+Executing (default): CREATE TABLE IF NOT EXISTS `floors` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`), `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors_backup`;
+Executing (default): DROP TABLE `floors_backup`;
+Executing (default): PRAGMA TABLE_INFO(`floors`);
+Executing (default): PRAGMA INDEX_LIST(`floors`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_floors_1`)
+Executing (default): PRAGMA foreign_key_list(`floors`)
+Executing (default): CREATE TABLE IF NOT EXISTS `floors_backup` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`), `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors_backup` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors`;
+Executing (default): DROP TABLE `floors`;
+Executing (default): CREATE TABLE IF NOT EXISTS `floors` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`), `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors_backup`;
+Executing (default): DROP TABLE `floors_backup`;
+Executing (default): PRAGMA TABLE_INFO(`floors`);
+Executing (default): PRAGMA INDEX_LIST(`floors`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_floors_1`)
+Executing (default): PRAGMA foreign_key_list(`floors`)
+Executing (default): CREATE TABLE IF NOT EXISTS `floors_backup` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`), `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors_backup` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors`;
+Executing (default): DROP TABLE `floors`;
+Executing (default): CREATE TABLE IF NOT EXISTS `floors` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`), `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors_backup`;
+Executing (default): DROP TABLE `floors_backup`;
+Executing (default): PRAGMA TABLE_INFO(`floors`);
+Executing (default): PRAGMA INDEX_LIST(`floors`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_floors_1`)
+Executing (default): PRAGMA foreign_key_list(`floors`)
+Executing (default): CREATE TABLE IF NOT EXISTS `floors_backup` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`), `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors_backup` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors`;
+Executing (default): DROP TABLE `floors`;
+Executing (default): CREATE TABLE IF NOT EXISTS `floors` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`), `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors_backup`;
+Executing (default): DROP TABLE `floors_backup`;
+Executing (default): PRAGMA TABLE_INFO(`floors`);
+Executing (default): PRAGMA INDEX_LIST(`floors`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_floors_1`)
+Executing (default): PRAGMA foreign_key_list(`floors`)
+Executing (default): CREATE TABLE IF NOT EXISTS `floors_backup` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`), `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors_backup` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors`;
+Executing (default): DROP TABLE `floors`;
+Executing (default): CREATE TABLE IF NOT EXISTS `floors` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`), `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors_backup`;
+Executing (default): DROP TABLE `floors_backup`;
+Executing (default): PRAGMA TABLE_INFO(`floors`);
+Executing (default): PRAGMA INDEX_LIST(`floors`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_floors_1`)
+Executing (default): PRAGMA foreign_key_list(`floors`)
+Executing (default): CREATE TABLE IF NOT EXISTS `floors_backup` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`), `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors_backup` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors`;
+Executing (default): DROP TABLE `floors`;
+Executing (default): CREATE TABLE IF NOT EXISTS `floors` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`), `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors_backup`;
+Executing (default): DROP TABLE `floors_backup`;
+Executing (default): PRAGMA TABLE_INFO(`floors`);
+Executing (default): PRAGMA INDEX_LIST(`floors`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_floors_1`)
+Executing (default): PRAGMA foreign_key_list(`floors`)
+Executing (default): CREATE TABLE IF NOT EXISTS `floors_backup` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`), `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors_backup` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors`;
+Executing (default): DROP TABLE `floors`;
+Executing (default): CREATE TABLE IF NOT EXISTS `floors` (`id` UUID UNIQUE PRIMARY KEY, `buildingId` UUID NOT NULL REFERENCES `buildings` (`id`), `name` VARCHAR(255) NOT NULL, `floorNumber` INTEGER NOT NULL, `layoutData` JSONB, `layoutImageUrl` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `floors` SELECT `id`, `buildingId`, `name`, `floorNumber`, `layoutData`, `layoutImageUrl`, `isActive`, `createdAt`, `updatedAt` FROM `floors_backup`;
+Executing (default): DROP TABLE `floors_backup`;
+Executing (default): PRAGMA INDEX_LIST(`floors`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_floors_1`)
+Executing (default): CREATE INDEX `floors_building_id` ON `floors` (`buildingId`)
+Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='space_types';
+Executing (default): PRAGMA TABLE_INFO(`space_types`);
+Executing (default): PRAGMA foreign_key_list(`space_types`)
+Executing (default): PRAGMA INDEX_LIST(`space_types`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_space_types_1`)
+Executing (default): PRAGMA foreign_key_list(`space_types`)
+Executing (default): PRAGMA TABLE_INFO(`space_types`);
+Executing (default): PRAGMA INDEX_LIST(`space_types`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_space_types_1`)
+Executing (default): PRAGMA foreign_key_list(`space_types`)
+Executing (default): CREATE TABLE IF NOT EXISTS `space_types_backup` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL UNIQUE, `description` TEXT);
+Executing (default): INSERT INTO `space_types_backup` SELECT `id`, `name`, `description` FROM `space_types`;
+Executing (default): DROP TABLE `space_types`;
+Executing (default): CREATE TABLE IF NOT EXISTS `space_types` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL UNIQUE, `description` TEXT);
+Executing (default): INSERT INTO `space_types` SELECT `id`, `name`, `description` FROM `space_types_backup`;
+Executing (default): DROP TABLE `space_types_backup`;
+Executing (default): PRAGMA TABLE_INFO(`space_types`);
+Executing (default): PRAGMA INDEX_LIST(`space_types`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_space_types_1`)
+Executing (default): PRAGMA foreign_key_list(`space_types`)
+Executing (default): CREATE TABLE IF NOT EXISTS `space_types_backup` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL UNIQUE, `description` TEXT);
+Executing (default): INSERT INTO `space_types_backup` SELECT `id`, `name`, `description` FROM `space_types`;
+Executing (default): DROP TABLE `space_types`;
+Executing (default): CREATE TABLE IF NOT EXISTS `space_types` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL UNIQUE, `description` TEXT);
+Executing (default): INSERT INTO `space_types` SELECT `id`, `name`, `description` FROM `space_types_backup`;
+Executing (default): DROP TABLE `space_types_backup`;
+Executing (default): PRAGMA INDEX_LIST(`space_types`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_space_types_1`)
+Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='spaces';
+Executing (default): PRAGMA TABLE_INFO(`spaces`);
+Executing (default): PRAGMA foreign_key_list(`spaces`)
+Executing (default): PRAGMA INDEX_LIST(`spaces`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_spaces_1`)
+Executing (default): PRAGMA INDEX_INFO(`spaces_floor_id`)
+Executing (default): PRAGMA INDEX_INFO(`spaces_space_type_id`)
+Executing (default): PRAGMA INDEX_INFO(`spaces_is_bookable_is_active`)
+Executing (default): PRAGMA foreign_key_list(`spaces`)
+Executing (default): PRAGMA TABLE_INFO(`spaces`);
+Executing (default): PRAGMA INDEX_LIST(`spaces`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_spaces_1`)
+Executing (default): PRAGMA INDEX_INFO(`spaces_floor_id`)
+Executing (default): PRAGMA INDEX_INFO(`spaces_space_type_id`)
+Executing (default): PRAGMA INDEX_INFO(`spaces_is_bookable_is_active`)
+Executing (default): PRAGMA foreign_key_list(`spaces`)
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces_backup` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces_backup` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces`;
+Executing (default): DROP TABLE `spaces`;
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces_backup`;
+Executing (default): DROP TABLE `spaces_backup`;
+Executing (default): PRAGMA TABLE_INFO(`spaces`);
+Executing (default): PRAGMA INDEX_LIST(`spaces`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_spaces_1`)
+Executing (default): PRAGMA foreign_key_list(`spaces`)
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces_backup` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces_backup` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces`;
+Executing (default): DROP TABLE `spaces`;
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces_backup`;
+Executing (default): DROP TABLE `spaces_backup`;
+Executing (default): PRAGMA TABLE_INFO(`spaces`);
+Executing (default): PRAGMA INDEX_LIST(`spaces`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_spaces_1`)
+Executing (default): PRAGMA foreign_key_list(`spaces`)
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces_backup` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces_backup` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces`;
+Executing (default): DROP TABLE `spaces`;
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces_backup`;
+Executing (default): DROP TABLE `spaces_backup`;
+Executing (default): PRAGMA TABLE_INFO(`spaces`);
+Executing (default): PRAGMA INDEX_LIST(`spaces`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_spaces_1`)
+Executing (default): PRAGMA foreign_key_list(`spaces`)
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces_backup` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces_backup` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces`;
+Executing (default): DROP TABLE `spaces`;
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces_backup`;
+Executing (default): DROP TABLE `spaces_backup`;
+Executing (default): PRAGMA TABLE_INFO(`spaces`);
+Executing (default): PRAGMA INDEX_LIST(`spaces`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_spaces_1`)
+Executing (default): PRAGMA foreign_key_list(`spaces`)
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces_backup` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces_backup` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces`;
+Executing (default): DROP TABLE `spaces`;
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces_backup`;
+Executing (default): DROP TABLE `spaces_backup`;
+Executing (default): PRAGMA TABLE_INFO(`spaces`);
+Executing (default): PRAGMA INDEX_LIST(`spaces`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_spaces_1`)
+Executing (default): PRAGMA foreign_key_list(`spaces`)
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces_backup` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces_backup` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces`;
+Executing (default): DROP TABLE `spaces`;
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces_backup`;
+Executing (default): DROP TABLE `spaces_backup`;
+Executing (default): PRAGMA TABLE_INFO(`spaces`);
+Executing (default): PRAGMA INDEX_LIST(`spaces`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_spaces_1`)
+Executing (default): PRAGMA foreign_key_list(`spaces`)
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces_backup` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces_backup` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces`;
+Executing (default): DROP TABLE `spaces`;
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces_backup`;
+Executing (default): DROP TABLE `spaces_backup`;
+Executing (default): PRAGMA TABLE_INFO(`spaces`);
+Executing (default): PRAGMA INDEX_LIST(`spaces`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_spaces_1`)
+Executing (default): PRAGMA foreign_key_list(`spaces`)
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces_backup` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces_backup` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces`;
+Executing (default): DROP TABLE `spaces`;
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces_backup`;
+Executing (default): DROP TABLE `spaces_backup`;
+Executing (default): PRAGMA TABLE_INFO(`spaces`);
+Executing (default): PRAGMA INDEX_LIST(`spaces`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_spaces_1`)
+Executing (default): PRAGMA foreign_key_list(`spaces`)
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces_backup` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces_backup` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces`;
+Executing (default): DROP TABLE `spaces`;
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces_backup`;
+Executing (default): DROP TABLE `spaces_backup`;
+Executing (default): PRAGMA TABLE_INFO(`spaces`);
+Executing (default): PRAGMA INDEX_LIST(`spaces`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_spaces_1`)
+Executing (default): PRAGMA foreign_key_list(`spaces`)
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces_backup` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces_backup` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces`;
+Executing (default): DROP TABLE `spaces`;
+Executing (default): CREATE TABLE IF NOT EXISTS `spaces` (`id` UUID UNIQUE PRIMARY KEY, `floorId` UUID NOT NULL REFERENCES `floors` (`id`), `spaceTypeId` INTEGER NOT NULL REFERENCES `space_types` (`id`), `name` VARCHAR(255) NOT NULL, `capacity` INTEGER, `isBookable` TINYINT(1) DEFAULT 1, `coordinates` JSONB, `features` JSONB DEFAULT '[]', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `spaces` SELECT `id`, `floorId`, `spaceTypeId`, `name`, `capacity`, `isBookable`, `coordinates`, `features`, `isActive`, `createdAt`, `updatedAt` FROM `spaces_backup`;
+Executing (default): DROP TABLE `spaces_backup`;
+Executing (default): PRAGMA INDEX_LIST(`spaces`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_spaces_1`)
+Executing (default): CREATE INDEX `spaces_floor_id` ON `spaces` (`floorId`)
+Executing (default): CREATE INDEX `spaces_space_type_id` ON `spaces` (`spaceTypeId`)
+Executing (default): CREATE INDEX `spaces_is_bookable_is_active` ON `spaces` (`isBookable`, `isActive`)
+Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='bookings';
+Executing (default): PRAGMA TABLE_INFO(`bookings`);
+Executing (default): PRAGMA foreign_key_list(`bookings`)
+Executing (default): PRAGMA INDEX_LIST(`bookings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_bookings_1`)
+Executing (default): PRAGMA INDEX_INFO(`bookings_user_id`)
+Executing (default): PRAGMA INDEX_INFO(`bookings_space_id_start_time_end_time`)
+Executing (default): PRAGMA INDEX_INFO(`bookings_start_time_end_time`)
+Executing (default): PRAGMA INDEX_INFO(`bookings_status`)
+Executing (default): PRAGMA foreign_key_list(`bookings`)
+Executing (default): PRAGMA TABLE_INFO(`bookings`);
+Executing (default): PRAGMA INDEX_LIST(`bookings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_bookings_1`)
+Executing (default): PRAGMA INDEX_INFO(`bookings_user_id`)
+Executing (default): PRAGMA INDEX_INFO(`bookings_space_id_start_time_end_time`)
+Executing (default): PRAGMA INDEX_INFO(`bookings_start_time_end_time`)
+Executing (default): PRAGMA INDEX_INFO(`bookings_status`)
+Executing (default): PRAGMA foreign_key_list(`bookings`)
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings_backup` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings_backup` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings`;
+Executing (default): DROP TABLE `bookings`;
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings_backup`;
+Executing (default): DROP TABLE `bookings_backup`;
+Executing (default): PRAGMA TABLE_INFO(`bookings`);
+Executing (default): PRAGMA INDEX_LIST(`bookings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_bookings_1`)
+Executing (default): PRAGMA foreign_key_list(`bookings`)
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings_backup` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings_backup` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings`;
+Executing (default): DROP TABLE `bookings`;
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings_backup`;
+Executing (default): DROP TABLE `bookings_backup`;
+Executing (default): PRAGMA TABLE_INFO(`bookings`);
+Executing (default): PRAGMA INDEX_LIST(`bookings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_bookings_1`)
+Executing (default): PRAGMA foreign_key_list(`bookings`)
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings_backup` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings_backup` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings`;
+Executing (default): DROP TABLE `bookings`;
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings_backup`;
+Executing (default): DROP TABLE `bookings_backup`;
+Executing (default): PRAGMA TABLE_INFO(`bookings`);
+Executing (default): PRAGMA INDEX_LIST(`bookings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_bookings_1`)
+Executing (default): PRAGMA foreign_key_list(`bookings`)
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings_backup` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings_backup` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings`;
+Executing (default): DROP TABLE `bookings`;
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings_backup`;
+Executing (default): DROP TABLE `bookings_backup`;
+Executing (default): PRAGMA TABLE_INFO(`bookings`);
+Executing (default): PRAGMA INDEX_LIST(`bookings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_bookings_1`)
+Executing (default): PRAGMA foreign_key_list(`bookings`)
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings_backup` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings_backup` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings`;
+Executing (default): DROP TABLE `bookings`;
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings_backup`;
+Executing (default): DROP TABLE `bookings_backup`;
+Executing (default): PRAGMA TABLE_INFO(`bookings`);
+Executing (default): PRAGMA INDEX_LIST(`bookings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_bookings_1`)
+Executing (default): PRAGMA foreign_key_list(`bookings`)
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings_backup` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings_backup` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings`;
+Executing (default): DROP TABLE `bookings`;
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings_backup`;
+Executing (default): DROP TABLE `bookings_backup`;
+Executing (default): PRAGMA TABLE_INFO(`bookings`);
+Executing (default): PRAGMA INDEX_LIST(`bookings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_bookings_1`)
+Executing (default): PRAGMA foreign_key_list(`bookings`)
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings_backup` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings_backup` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings`;
+Executing (default): DROP TABLE `bookings`;
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings_backup`;
+Executing (default): DROP TABLE `bookings_backup`;
+Executing (default): PRAGMA TABLE_INFO(`bookings`);
+Executing (default): PRAGMA INDEX_LIST(`bookings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_bookings_1`)
+Executing (default): PRAGMA foreign_key_list(`bookings`)
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings_backup` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings_backup` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings`;
+Executing (default): DROP TABLE `bookings`;
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings_backup`;
+Executing (default): DROP TABLE `bookings_backup`;
+Executing (default): PRAGMA TABLE_INFO(`bookings`);
+Executing (default): PRAGMA INDEX_LIST(`bookings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_bookings_1`)
+Executing (default): PRAGMA foreign_key_list(`bookings`)
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings_backup` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings_backup` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings`;
+Executing (default): DROP TABLE `bookings`;
+Executing (default): CREATE TABLE IF NOT EXISTS `bookings` (`id` UUID UNIQUE PRIMARY KEY, `userId` UUID NOT NULL REFERENCES `users` (`id`), `spaceId` UUID NOT NULL REFERENCES `spaces` (`id`), `startTime` DATETIME NOT NULL, `endTime` DATETIME NOT NULL, `status` TEXT DEFAULT 'confirmed', `cancelledAt` DATETIME, `notes` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `bookings` SELECT `id`, `userId`, `spaceId`, `startTime`, `endTime`, `status`, `cancelledAt`, `notes`, `createdAt`, `updatedAt` FROM `bookings_backup`;
+Executing (default): DROP TABLE `bookings_backup`;
+Executing (default): PRAGMA INDEX_LIST(`bookings`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_bookings_1`)
+Executing (default): CREATE INDEX `bookings_user_id` ON `bookings` (`userId`)
+Executing (default): CREATE INDEX `bookings_space_id_start_time_end_time` ON `bookings` (`spaceId`, `startTime`, `endTime`)
+Executing (default): CREATE INDEX `bookings_start_time_end_time` ON `bookings` (`startTime`, `endTime`)
+Executing (default): CREATE INDEX `bookings_status` ON `bookings` (`status`)
+20. Database synchronized
+21. ✅ Server running on port 5001
+22. 🏥 Health check: http://localhost:5001/health
+23. 📖 API base URL: http://localhost:5001/api
